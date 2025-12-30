@@ -1,0 +1,30 @@
+[project]
+name = "micrograd"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ankur Kumar", email = "ank@leoank.me" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.2.6",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipython>=8.37.0",
+    "jupyter-collaboration>=4.2.0",
+    "jupyterlab>=4.5.1",
+    "jupytext>=1.18.1",
+    "nbdev>=2.4.7",
+    "nbdotrun>=0.1.1",
+]
+
+[tool.jupytext.formats]
+"notebooks/ipynb" = "ipynb"
+"notebooks/pypct" = "py:percent"
